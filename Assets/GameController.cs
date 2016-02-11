@@ -27,14 +27,17 @@ public class GameController : NetworkBehaviour
         _player = player;
     }
 
+    [Server]
     public void CheckWin()
     {
         int redCount = 0;
         int blueCount = 0;
         for (int i = 0; i < spaces.Length; i++)
         {
-            if (spaces[i].GetComponent<SpaceScript>().state == 1) redCount += 1;
-            else blueCount += 1;
+            int state = spaces[i].GetComponent<SpaceScript>().state;
+
+            if (state == 1) redCount += 1;
+            else if (state == 2) blueCount += 1;
         }
         if (redCount == 9) Debug.Log("Red Winner");
         else if (blueCount == 9) Debug.Log("Blue Winner");
