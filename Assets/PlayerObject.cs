@@ -16,7 +16,7 @@ public class PlayerObject : NetworkBehaviour
     }
 
 
-    public void objectClicked(GameObject tile)
+    public void ObjectClicked(GameObject tile)
     {
         CmdAssignState(tile);
     }
@@ -35,7 +35,7 @@ public class PlayerObject : NetworkBehaviour
     [ClientRpc]
     void RpcUpdateState(int newState, GameObject tile)
     {
-        tile.GetComponent<SpaceScript>().setstate(newState);
+        tile.GetComponent<SpaceScript>().SetState(newState);
 
     }
 
