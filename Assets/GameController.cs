@@ -8,8 +8,12 @@ public class GameController : NetworkBehaviour
     public static GameObject controller;
     public static GameController singleton;
     public TimerScript timerScript { get; private set; }
+
+    [SyncVar]
+    private float timer;
     public GameObject spaceprefab;
     private GameObject _player;
+
     private GameObject[] spaces = new GameObject[9];
 
     void Start()
@@ -20,14 +24,10 @@ public class GameController : NetworkBehaviour
         controller = gameObject;
     }
 
-    void OnPlayerConnected(NetworkPlayer player)
-    {
-        Debug.Log("Player Connected4");
-    }
 
-    void OnConnectedToServer()
+    void Update()
     {
-        Debug.Log("Connected to Server");
+        timer = timerScript.timeLeft;
     }
 
     public GameObject GetPlayer()
