@@ -68,12 +68,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonNetworkManager.cs" />
     <Compile Include="Assets\CubePlayer.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\PlayerObject.cs" />
+    <Compile Include="Assets\SGA\Scripts\Item.cs" />
+    <Compile Include="Assets\SGA\Scripts\ItemType.cs" />
+    <Compile Include="Assets\SGA\Scripts\JSON\JSONObject.cs" />
+    <Compile Include="Assets\SGA\Scripts\JSON\JSONTemplates.cs" />
+    <Compile Include="Assets\SGA\Scripts\JSON\VectorTemplates.cs" />
+    <Compile Include="Assets\SGA\Scripts\Match.cs" />
+    <Compile Include="Assets\SGA\Scripts\MatchActor.cs" />
+    <Compile Include="Assets\SGA\Scripts\MatchRound.cs" />
+    <Compile Include="Assets\SGA\Scripts\MiniJSON.cs" />
+    <Compile Include="Assets\SGA\Scripts\Profile.cs" />
+    <Compile Include="Assets\SGA\Scripts\ProfilePlatform.cs" />
+    <Compile Include="Assets\SGA\Scripts\SocialGamificationManager.cs" />
+    <Compile Include="Assets\SGA\Scripts\SocialGamificationPlatform.cs" />
+    <Compile Include="Assets\SGA\Scripts\User.cs" />
     <Compile Include="Assets\SpaceScript.cs" />
     <Compile Include="Assets\SpawnCubes.cs" />
     <Compile Include="Assets\TimerScript.cs" />
+    <Compile Include="Assets\test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\SGA\Scripts\JSON\readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
