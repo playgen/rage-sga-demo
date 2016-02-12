@@ -5,7 +5,7 @@ using System.Collections;
 public class TimerScript : MonoBehaviour {
 
     private Text timeText;
-    private float timeLeft;
+    public float timeLeft;
     public float startTime;
     private bool startTimer = false;
 
