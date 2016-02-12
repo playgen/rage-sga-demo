@@ -15,7 +15,15 @@ public class PlayerObject : NetworkBehaviour
         }
     }
 
+    void OnPlayerConnected(NetworkPlayer player)
+    {
+        Debug.Log("Player Connected");
+    }
 
+    void OnConnectedToServer()
+    {
+        Debug.Log("Connected to Server2");
+    }
     public void ObjectClicked(GameObject tile)
     {
         CmdAssignState(tile);

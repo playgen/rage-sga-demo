@@ -7,6 +7,7 @@ public class GameController : NetworkBehaviour
 
     public static GameObject controller;
     public static GameController singleton;
+    public TimerScript timerScript { get; private set; }
     public GameObject spaceprefab;
     private GameObject _player;
     private GameObject[] spaces = new GameObject[9];
@@ -14,7 +15,19 @@ public class GameController : NetworkBehaviour
     void Start()
     {
         singleton = this;
+        timerScript = FindObjectOfType<TimerScript>();
+        timerScript.StartTimer();
         controller = gameObject;
+    }
+
+    void OnPlayerConnected(NetworkPlayer player)
+    {
+        Debug.Log("Player Connected4");
+    }
+
+    void OnConnectedToServer()
+    {
+        Debug.Log("Connected to Server");
     }
 
     public GameObject GetPlayer()

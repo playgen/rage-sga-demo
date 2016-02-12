@@ -14,343 +14,223 @@ Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityE
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.084 seconds
+- Completed reload, in  0.129 seconds
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.963895 ms
+UnloadTime: 0.915254 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4dd8 -> priority: 1 
-  Thread -> id: 4a30 -> priority: 1 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+  Thread -> id: 683c -> priority: 1 
+  Thread -> id: 6f9c -> priority: 1 
+RegisterHandler id:32 handler:OnClientConnectInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandler id:33 handler:OnClientDisconnectInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandler id:36 handler:OnClientNotReadyMessageInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandler id:34 handler:OnClientErrorInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandler id:39 handler:OnClientSceneInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Registering prefab 'PlayerObject' as asset:aeee701fbf14990478cf4fccc663a3f4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Registering prefab 'Space' as asset:d01309bce5348234b9f6580cb052404e
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+NetworkManager StartClient address:localhost port:7777
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:3 handler:OnObjectSpawn
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:10 handler:OnObjectSpawnScene
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:12 handler:OnObjectSpawnFinished
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:1 handler:OnObjectDestroy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:13 handler:OnObjectDestroy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:8 handler:OnUpdateVarsMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:4 handler:OnOwnerMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:9 handler:OnSyncListMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:40 handler:OnAnimationClientMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:41 handler:OnAnimationParametersClientMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:15 handler:OnClientAuthority
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:2 handler:OnRPCMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:7 handler:OnSyncEventMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:42 handler:OnAnimationTriggerClientMessage
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+RegisterHandlerSafe id:14 handler:OnCRC
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client Connect: localhost:7777
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client connected
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+NetworkManager:OnClientConnectInternal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+ClientScene::Ready() called with connection [hostId: 0 connectionId: 1 isReady: False channel count: 2]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+ClientScene::AddPlayer() for ID 0 called with connection [hostId: 0 connectionId: 1 isReady: True channel count: 2]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Script: PlayerObject Channel: 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+SpawnFinished:0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+ClientScene::PrepareSpawnObjects sceneId:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn scene handler instantiating [netId:1 sceneId:1 pos:(-0.3, 0.1, 0.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn for [netId:1] [sceneId:1] obj:GameController
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:2 asset ID:d01309bce5348234b9f6580cb052404e pos:(-3.0, -3.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:3 asset ID:d01309bce5348234b9f6580cb052404e pos:(-3.0, -1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:4 asset ID:d01309bce5348234b9f6580cb052404e pos:(-3.0, 1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:5 asset ID:d01309bce5348234b9f6580cb052404e pos:(-1.0, -3.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:6 asset ID:d01309bce5348234b9f6580cb052404e pos:(-1.0, -1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:7 asset ID:d01309bce5348234b9f6580cb052404e pos:(-1.0, 1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:8 asset ID:d01309bce5348234b9f6580cb052404e pos:(1.0, -3.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:9 asset ID:d01309bce5348234b9f6580cb052404e pos:(1.0, -1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:10 asset ID:d01309bce5348234b9f6580cb052404e pos:(1.0, 1.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+SpawnFinished:1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:11 asset ID:aeee701fbf14990478cf4fccc663a3f4 pos:(0.0, 0.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+ClientScene::OnOwnerMessage - connectionId=1 netId: 11
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+ClientScene::InternalAddPlayer: playerControllerId : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:12 asset ID:aeee701fbf14990478cf4fccc663a3f4 pos:(0.0, 0.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-[Server] function 'System.Void GameController::CheckWin()' called on client
+Client spawn handler instantiating [netId:12 asset ID:aeee701fbf14990478cf4fccc663a3f4 pos:(0.0, 0.0, 0.0)]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
 Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777}
+Client disconnected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+NetworkManager:OnClientDisconnectInternal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+NetworkManager StopClient
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Shutting down client -1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
