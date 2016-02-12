@@ -73,6 +73,7 @@
     <Compile Include="Assets\PlayerObject.cs" />
     <Compile Include="Assets\SpaceScript.cs" />
     <Compile Include="Assets\SpawnCubes.cs" />
+    <Compile Include="Assets\TimerScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
