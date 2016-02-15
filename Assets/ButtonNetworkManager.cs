@@ -18,7 +18,7 @@ public class ButtonNetworkManager : NetworkManager
 	public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
 	{
 		base.OnServerAddPlayer(conn, playerControllerId);
-		if (numPlayers == 3)
+		if (numPlayers == 2)
 		{
 			Match.Load("0", true, string.Empty, (Match[] matches) =>
 			{
@@ -34,6 +34,8 @@ public class ButtonNetworkManager : NetworkManager
 						{
 							Debug.Log("Found match with " + match.users);
 							ServerManager.CurrentMatch = match;
+                            //Start Game
+                            GameController.singleton.GetComponent<GameController>().StartGame();
 							return;
 						}
 					}

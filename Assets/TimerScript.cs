@@ -4,20 +4,15 @@ using System.Collections;
 
 public class TimerScript : MonoBehaviour {
 
-    private Text timeText;
-    public float timeLeft;
-    public float startTime;
+    private double startTime = 30.0;
     private bool startTimer = false;
+    public double timeLeft;
 
 	// Use this for initialization
 	void Start () {
-        timeText = GetComponent<Text>();
         timeLeft = startTime;
 	}
-    void OnPlayerConnected(NetworkPlayer player)
-    {
-        Debug.Log("Player Connected3");
-    }
+
     public void StartTimer()
     {
         startTimer = true;
@@ -27,13 +22,12 @@ public class TimerScript : MonoBehaviour {
 	void Update () {
         if (startTimer)
         {
-            timeText.text = timeLeft.ToString();
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {
+                timeLeft = 0;
                 startTimer = false;
             }
         }
-           
 	}
 }

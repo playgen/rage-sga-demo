@@ -8,27 +8,62 @@ public class GameController : NetworkBehaviour
 	public static GameController singleton;
 
 	public TimerScript timerScript { get; private set; }
-
-	[SyncVar]
-	private float timer;
+	[SyncVar(hook="OnTimeChange")]
+	private string timer = "";
+    private Text timerText;
+    private string timeDecimalPoint = "0.00";
 
 	public GameObject spaceprefab;
 	private GameObject _player;
-
 	private GameObject[] spaces = new GameObject[9];
+
+    public bool gameInProgress = false;
+    // score
+    public int redCount = 0;
+    public int blueCount = 0;
 
 	private void Start()
 	{
 		singleton = this;
 		timerScript = FindObjectOfType<TimerScript>();
-		timerScript.StartTimer();
+        timerText = GameObject.Find("Timer").GetComponent<Text>();
+
 		controller = gameObject;
 	}
 
+    public void StartGame()
+    {
+        gameInProgress = true;
+        timerScript.StartTimer();
+    }
+
 	private void Update()
 	{
-		timer = timerScript.timeLeft;
+        if (gameInProgress)
+        {
+            double timeLeft = timerScript.timeLeft;
+            TruncateTime(timeLeft);
+            if (timeLeft == 0)
+            {
+                gameInProgress = false;
+                CheckWin();
+            }
+        }   
 	}
+
+    private void TruncateTime(double timeLeft)
+    {
+        string truncateTime = timeLeft.ToString(timeDecimalPoint);
+        if (timer != truncateTime)
+        {
+            timer = truncateTime;
+        }
+    }
+
+    private void OnTimeChange(string time)
+    {
+        timerText.text = time;
+    }
 
 	public GameObject GetPlayer()
 	{
@@ -40,33 +75,61 @@ public class GameController : NetworkBehaviour
 		_player = player;
 	}
 
+    [Server]
+    public void SetScore(GameObject tile, int player)
+    {
+        int state = tile.GetComponent<SpaceScript>().state;
+        if (player == 1)
+        {
+            if (state == 2)
+            {
+                blueCount--;
+            }
+            redCount++;
+        }
+        else
+        {
+            if (state == 1)
+            {
+                redCount--;
+            }
+            blueCount++;
+        }
+    }
+
 	[Server]
 	public void CheckWin()
 	{
-		int redCount = 0;
-		int blueCount = 0;
-		for (int i = 0; i < spaces.Length; i++)
-		{
-			int state = spaces[i].GetComponent<SpaceScript>().state;
-
-			if (state == 1)
-			{
-				redCount += 1;
-			}
-			else if (state == 2)
-			{
-				blueCount += 1;
-			}
-		}
 		if (redCount == 9)
 		{
-			Debug.Log("Red Winner");
+            SetWinner("Red");
 		}
 		else if (blueCount == 9)
 		{
-			Debug.Log("Blue Winner");
+			SetWinner("Blue");
 		}
+        if (gameInProgress == false)
+        {
+            if (redCount > blueCount)
+            {
+                SetWinner("Red");
+            }
+            else if (blueCount > redCount) 
+            {
+                SetWinner("Blue");
+            }
+            else 
+            {
+                SetWinner("No");
+            }
+        }
 	}
+
+    private void SetWinner(string winner)
+    {
+        gameInProgress = false;
+        timer = winner + " winner";
+    }
 
 	public override void OnStartServer()
 	{

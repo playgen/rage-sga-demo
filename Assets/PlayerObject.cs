@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class PlayerObject : NetworkBehaviour
 {
+    private GameController gameControllerScript;
 	private void Start()
 	{
+        gameControllerScript = GameController.singleton.GetComponent<GameController>();
 		if (isLocalPlayer)
 		{
-			GameController.controller.GetComponent<GameController>().SetPlayer(gameObject);
+            gameControllerScript.SetPlayer(gameObject);
 		}
 	}
 
@@ -23,7 +25,6 @@ public class PlayerObject : NetworkBehaviour
 	public void CmdAssignState(GameObject tile)
 	{
 		int state;
-
 		if (isLocalPlayer)
 		{
 			state = 1;
@@ -32,8 +33,12 @@ public class PlayerObject : NetworkBehaviour
 		{
 			state = 2;
 		}
-
-		RpcUpdateState(state, tile);
+        // check to see if the state is new
+        if (tile.GetComponent<SpaceScript>().state != state)
+        {
+            gameControllerScript.SetScore(tile, state);
+            RpcUpdateState(state, tile);
+        }
 	}
 
 	[ClientRpc]
