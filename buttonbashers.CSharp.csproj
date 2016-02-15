@@ -72,8 +72,6 @@
     <Compile Include="Assets\CubePlayer.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\PlayerObject.cs" />
-    <Compile Include="Assets\SGA\Scripts\Item.cs" />
-    <Compile Include="Assets\SGA\Scripts\ItemType.cs" />
     <Compile Include="Assets\SGA\Scripts\JSON\JSONObject.cs" />
     <Compile Include="Assets\SGA\Scripts\JSON\JSONTemplates.cs" />
     <Compile Include="Assets\SGA\Scripts\JSON\VectorTemplates.cs" />
@@ -86,6 +84,7 @@
     <Compile Include="Assets\SGA\Scripts\SocialGamificationManager.cs" />
     <Compile Include="Assets\SGA\Scripts\SocialGamificationPlatform.cs" />
     <Compile Include="Assets\SGA\Scripts\User.cs" />
+    <Compile Include="Assets\ServerManager.cs" />
     <Compile Include="Assets\SpaceScript.cs" />
     <Compile Include="Assets\SpawnCubes.cs" />
     <Compile Include="Assets\TimerScript.cs" />
