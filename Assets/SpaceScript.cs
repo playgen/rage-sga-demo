@@ -8,7 +8,7 @@ public class SpaceScript : NetworkBehaviour
 {
     public Color red = Color.red;
     public Color blue = Color.blue;
-    public int state;
+    public int state = 0;
     NetworkIdentity myNetId;
 
     void Awake()
@@ -33,8 +33,11 @@ public class SpaceScript : NetworkBehaviour
 
     void OnMouseDown()
     {
-        GameObject currentPlayer = GameController.singleton.GetComponent<GameController>().GetPlayer();
-        currentPlayer.GetComponent<PlayerObject>().ObjectClicked(gameObject);
+        if (GameController.singleton.GetComponent<GameController>().gameInProgress)
+        {
+            GameObject currentPlayer = GameController.singleton.GetComponent<GameController>().GetPlayer();
+            currentPlayer.GetComponent<PlayerObject>().ObjectClicked(gameObject);
+        }
     }
 
 }
