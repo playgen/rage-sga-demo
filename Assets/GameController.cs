@@ -17,9 +17,12 @@ public class GameController : NetworkBehaviour
 	private GameObject _player;
 	private GameObject[] spaces = new GameObject[9];
 
+    [SyncVar]
     public bool gameInProgress = false;
     // score
+    [SyncVar]
     public int redCount = 0;
+    [SyncVar]
     public int blueCount = 0;
 
 	private void Start()
@@ -33,6 +36,7 @@ public class GameController : NetworkBehaviour
 
     public void StartGame()
     {
+        Debug.Log("Start Game");
         gameInProgress = true;
         timerScript.StartTimer();
     }
@@ -47,35 +51,18 @@ public class GameController : NetworkBehaviour
             {
                 gameInProgress = false;
                 CheckWin();
+                RpcClientCheckWin();
             }
         }   
 	}
 
-    private void TruncateTime(double timeLeft)
+    [ClientRpc]
+    private void RpcClientCheckWin()
     {
-        string truncateTime = timeLeft.ToString(timeDecimalPoint);
-        if (timer != truncateTime)
-        {
-            timer = truncateTime;
-        }
+        //Force Game End on Client
+        CheckWin(true);
     }
 
-    private void OnTimeChange(string time)
-    {
-        timerText.text = time;
-    }
-
-	public GameObject GetPlayer()
-	{
-		return _player;
-	}
-
-	public void SetPlayer(GameObject player)
-	{
-		_player = player;
-	}
-
-    [Server]
     public void SetScore(GameObject tile, int player)
     {
         int state = tile.GetComponent<SpaceScript>().state;
@@ -95,20 +82,35 @@ public class GameController : NetworkBehaviour
             }
             blueCount++;
         }
+        CheckWin();
     }
 
-	[Server]
-	public void CheckWin()
+	public void CheckWin(bool forceGameEnd = false)
 	{
-		if (redCount == 9)
+        bool gameEnd;
+        if (forceGameEnd)
+        {
+            gameEnd = false;
+        }
+        else
+        {
+            gameEnd = gameInProgress;
+        }
+        Debug.Log("CheckWin: Red = " + redCount + ", Blue = " + blueCount);
+        bool scoreSent = false;
+        if (redCount == 9)
 		{
             SetWinner("Red");
+            scoreSent = true;
 		}
 		else if (blueCount == 9)
 		{
+           
 			SetWinner("Blue");
+            scoreSent = true;
 		}
-        if (gameInProgress == false)
+        
+        if (!scoreSent && !gameEnd)
         {
             if (redCount > blueCount)
             {
@@ -125,11 +127,38 @@ public class GameController : NetworkBehaviour
         }
 	}
 
-    private void SetWinner(string winner)
+    public void SetWinner(string winner)
     {
+        Debug.Log("Setwinner: " + isServer);
+        int score;
+        if (isServer) 
+        {
+            score = redCount;
+        }
+        else
+        {
+            score = blueCount;
+        }
+        // SGA game end
+        GameObject.Find("ServerManager").GetComponent<ServerManager>().EndMatch(score);
         gameInProgress = false;
         timer = winner + " winner";
     }
+
+    private void TruncateTime(double timeLeft)
+    {
+        string truncateTime = timeLeft.ToString(timeDecimalPoint);
+        if (timer != truncateTime)
+        {
+            timer = truncateTime;
+        }
+    }
+
+    private void OnTimeChange(string time)
+    {
+        timerText.text = time;
+    }
+
 
 	public override void OnStartServer()
 	{
@@ -144,4 +173,15 @@ public class GameController : NetworkBehaviour
 			}
 		}
 	}
+
+    public GameObject GetPlayer()
+    {
+        return _player;
+    }
+
+    public void SetPlayer(GameObject player)
+    {
+        _player = player;
+    }
+
 }

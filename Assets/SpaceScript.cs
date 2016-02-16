@@ -27,7 +27,6 @@ public class SpaceScript : NetworkBehaviour
         {
             gameObject.GetComponent<Renderer>().material.color = blue;
         }
-        GameController.singleton.GetComponent<GameController>().CheckWin();
     }
 
 

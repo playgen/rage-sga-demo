@@ -36,7 +36,6 @@ public class PlayerObject : NetworkBehaviour
         // check to see if the state is new
         if (tile.GetComponent<SpaceScript>().state != state)
         {
-            gameControllerScript.SetScore(tile, state);
             RpcUpdateState(state, tile);
         }
 	}
@@ -44,6 +43,7 @@ public class PlayerObject : NetworkBehaviour
 	[ClientRpc]
 	private void RpcUpdateState(int newState, GameObject tile)
 	{
+        gameControllerScript.SetScore(tile, newState);
 		tile.GetComponent<SpaceScript>().SetState(newState);
 	}
 }

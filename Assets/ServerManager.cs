@@ -69,6 +69,25 @@ public class ServerManager : NetworkBehaviour
 		}
 	}
 
+    [Server]
+    public void EndMatch(int score)
+    {
+        RpcOpponentScore(CurrentMatch,score);
+        CurrentMatch.Score((float)score, (bool success, string err) => {
+            Debug.Log("Success: " + success + ". Error: " + err);
+            //CurrentMatch.End();
+        });
+    }
+    [ClientRpc]
+    private void RpcOpponentScore(Match currentMatch,int score)
+    {
+        CurrentMatch.Score((float)(9-score), (bool success, string err) =>
+        {
+            Debug.Log("Success: " + success + ". Error: " + err);
+            //CurrentMatch.End();
+        });
+    }
+
 	// Update is called once per frame
 	private void Update()
 	{
