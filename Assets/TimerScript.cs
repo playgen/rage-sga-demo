@@ -4,7 +4,7 @@ using System.Collections;
 
 public class TimerScript : MonoBehaviour {
 
-    private double startTime = 30.0;
+    private double startTime = 10.0;
     private bool startTimer = false;
     public double timeLeft;
 
