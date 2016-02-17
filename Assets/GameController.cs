@@ -6,6 +6,7 @@ public class GameController : NetworkBehaviour
 {
 	public static GameObject controller;
 	public static GameController singleton;
+    private ServerManager serverManager;
 
 	public TimerScript timerScript { get; private set; }
 	[SyncVar(hook="OnTimeChange")]
@@ -27,11 +28,11 @@ public class GameController : NetworkBehaviour
 
 	private void Start()
 	{
-		singleton = this;
+        controller = gameObject;
+        singleton = this;
 		timerScript = FindObjectOfType<TimerScript>();
         timerText = GameObject.Find("Timer").GetComponent<Text>();
-
-		controller = gameObject;
+        serverManager = GameObject.Find("ServerManager").GetComponent<ServerManager>();
 	}
 
     public void StartGame()
@@ -129,6 +130,8 @@ public class GameController : NetworkBehaviour
 
     public void SetWinner(string winner)
     {
+        gameInProgress = false;
+
         Debug.Log("Setwinner: " + isServer);
         int score;
         if (isServer) 
@@ -140,8 +143,8 @@ public class GameController : NetworkBehaviour
             score = blueCount;
         }
         // SGA game end
-        GameObject.Find("ServerManager").GetComponent<ServerManager>().EndMatch(score);
-        gameInProgress = false;
+        serverManager.EndMatch(score);
+
         timer = winner + " winner";
     }
 
