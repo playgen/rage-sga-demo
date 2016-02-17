@@ -50,6 +50,7 @@ public class ServerManager : NetworkBehaviour
 	{
 		if (!isServer)
 		{
+            Debug.Log("Client Join Match");
 			SearchCustomData[] searchData = {
 			new SearchCustomData("isSearching", eSearchOperator.Equals, "1")
 		};
@@ -69,22 +70,11 @@ public class ServerManager : NetworkBehaviour
 		}
 	}
 
-    [Server]
     public void EndMatch(int score)
     {
-        RpcOpponentScore(CurrentMatch,score);
         CurrentMatch.Score((float)score, (bool success, string err) => {
             Debug.Log("Success: " + success + ". Error: " + err);
-            //CurrentMatch.End();
-        });
-    }
-    [ClientRpc]
-    private void RpcOpponentScore(Match currentMatch,int score)
-    {
-        CurrentMatch.Score((float)(9-score), (bool success, string err) =>
-        {
-            Debug.Log("Success: " + success + ". Error: " + err);
-            //CurrentMatch.End();
+            CurrentMatch.End();
         });
     }
 
