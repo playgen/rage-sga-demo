@@ -14,18 +14,18 @@ Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityE
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.136 seconds
+- Completed reload, in  0.075 seconds
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.602434 ms
+UnloadTime: 0.605111 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1c9c -> priority: 1 
-  Thread -> id: 8cb4 -> priority: 1 
-[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/17/2016 10:00 AM
+  Thread -> id: ac94 -> priority: 1 
+  Thread -> id: 7578 -> priority: 1 
+[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/17/2016 3:29 PM
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -57,51 +57,39 @@ CheckWin: Red = 0, Blue = 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 1
+CheckWin: Red = 0, Blue = 2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 2
+CheckWin: Red = 0, Blue = 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 3
+CheckWin: Red = 0, Blue = 4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 4
+CheckWin: Red = 0, Blue = 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 5
+CheckWin: Red = 0, Blue = 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 6
+CheckWin: Red = 0, Blue = 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 2, Blue = 6
+CheckWin: Red = 1, Blue = 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 3, Blue = 6
+CheckWin: Red = 2, Blue = 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Setwinner: True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-{"ActorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c", "Score":"3", "RoundNumber":"1"}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
+CheckWin: Red = 2, Blue = 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -109,11 +97,23 @@ Setwinner: True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"ActorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c", "Score":"3", "RoundNumber":"1"}
+{"ActorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c", "Score":"2", "RoundNumber":"1"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Score Text: {"$id":"1","roundNumber":1,"matchActorId":"43268a46-5c3a-455f-a18b-955d80642a74","matchActor":{"$id":"2","matchId":"ca35f731-bd69-46d3-b35e-6a317018ae65","match":{"$id":"3","tournamentId":"7a0b07e8-f03b-4d75-9ac6-a9428847cfd9","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$ref":"2"},{"$id":"4","matchId":"ca35f731-bd69-46d3-b35e-6a317018ae65","match":{"$ref":"3"},"actorId":"17007bfd-f206-4c5c-8f07-f66855368348","actor":null,"customData":null,"id":"d232ed6c-80a6-485e-bef2-d093b61b7a82","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"}],"customData":null,"id":"ca35f731-bd69-46d3-b35e-6a317018ae65","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"},"actorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","updatedDate":"2016-02-17T10:00:15","createdDate":"2016-02-17T09:58:22"},"customData":null,"id":"43268a46-5c3a-455f-a18b-955d80642a74","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"},"score":3,"dateScore":"2016-02-17T10:00:27.9910325+00:00","id":"eb58d373-290d-4775-87b5-145e2e2bbd0a","updatedDate":"2016-02-17T10:00:28.0125318+00:00","createdDate":"2016-02-17T10:00:17"}
+CheckWin: Red = 2, Blue = 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setwinner: True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"ActorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c", "Score":"2", "RoundNumber":"1"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"a63d8193-72f1-4dac-8a17-aea95a79d982","matchActor":{"$id":"2","matchId":"b7688b91-7cea-4ef0-93b7-823fe809858f","match":{"$id":"3","tournamentId":"63cadde2-2db2-4b70-9c0b-95de301a180a","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"b7688b91-7cea-4ef0-93b7-823fe809858f","match":{"$ref":"3"},"actorId":"17007bfd-f206-4c5c-8f07-f66855368348","actor":null,"customData":null,"id":"22e61ccb-0222-4487-9041-2a6b3d85bbfc","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},{"$ref":"2"}],"customData":null,"id":"b7688b91-7cea-4ef0-93b7-823fe809858f","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},"actorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","updatedDate":"2016-02-17T15:29:09","createdDate":"2016-02-17T09:58:22"},"customData":null,"id":"a63d8193-72f1-4dac-8a17-aea95a79d982","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},"score":2,"dateScore":"2016-02-17T15:29:24.296239+00:00","id":"43f98f9c-34d3-4306-b02b-b80bf47419c0","updatedDate":"2016-02-17T15:29:24.2967383+00:00","createdDate":"2016-02-17T15:29:11"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -121,11 +121,7 @@ Success: True. Error:
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"Id":"ca35f731-bd69-46d3-b35e-6a317018ae65", "TournamentId":"7a0b07e8-f03b-4d75-9ac6-a9428847cfd9", "IsFinished":"true"}
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Score Text: {"$id":"1","roundNumber":1,"matchActorId":"43268a46-5c3a-455f-a18b-955d80642a74","matchActor":{"$id":"2","matchId":"ca35f731-bd69-46d3-b35e-6a317018ae65","match":{"$id":"3","tournamentId":"7a0b07e8-f03b-4d75-9ac6-a9428847cfd9","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$ref":"2"},{"$id":"4","matchId":"ca35f731-bd69-46d3-b35e-6a317018ae65","match":{"$ref":"3"},"actorId":"17007bfd-f206-4c5c-8f07-f66855368348","actor":null,"customData":null,"id":"d232ed6c-80a6-485e-bef2-d093b61b7a82","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"}],"customData":null,"id":"ca35f731-bd69-46d3-b35e-6a317018ae65","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"},"actorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","updatedDate":"2016-02-17T10:00:15","createdDate":"2016-02-17T09:58:22"},"customData":null,"id":"43268a46-5c3a-455f-a18b-955d80642a74","updatedDate":"2016-02-17T10:00:17","createdDate":"2016-02-17T10:00:17"},"score":3,"dateScore":"2016-02-17T10:00:28.3015315+00:00","id":"eb58d373-290d-4775-87b5-145e2e2bbd0a","updatedDate":"2016-02-17T10:00:28.3235337+00:00","createdDate":"2016-02-17T10:00:17"}
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"a63d8193-72f1-4dac-8a17-aea95a79d982","matchActor":{"$id":"2","matchId":"b7688b91-7cea-4ef0-93b7-823fe809858f","match":{"$id":"3","tournamentId":"63cadde2-2db2-4b70-9c0b-95de301a180a","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"b7688b91-7cea-4ef0-93b7-823fe809858f","match":{"$ref":"3"},"actorId":"17007bfd-f206-4c5c-8f07-f66855368348","actor":null,"customData":null,"id":"22e61ccb-0222-4487-9041-2a6b3d85bbfc","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},{"$ref":"2"}],"customData":null,"id":"b7688b91-7cea-4ef0-93b7-823fe809858f","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},"actorId":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"c0478948-9cb4-47ab-aa81-afaa5ec93f3c","updatedDate":"2016-02-17T15:29:09","createdDate":"2016-02-17T09:58:22"},"customData":null,"id":"a63d8193-72f1-4dac-8a17-aea95a79d982","updatedDate":"2016-02-17T15:29:11","createdDate":"2016-02-17T15:29:11"},"score":2,"dateScore":"2016-02-17T15:29:24.2712424+00:00","id":"43f98f9c-34d3-4306-b02b-b80bf47419c0","updatedDate":"2016-02-17T15:29:24.27274+00:00","createdDate":"2016-02-17T15:29:11"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -133,7 +129,39 @@ Success: True. Error:
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"Id":"ca35f731-bd69-46d3-b35e-6a317018ae65", "TournamentId":"7a0b07e8-f03b-4d75-9ac6-a9428847cfd9", "IsFinished":"true"}
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+HashContains actors
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+c0478948-9cb4-47ab-aa81-afaa5ec93f3c
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MyScore : 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+17007bfd-f206-4c5c-8f07-f66855368348
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+OpponentScore : 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Id":"b7688b91-7cea-4ef0-93b7-823fe809858f", "TournamentId":"63cadde2-2db2-4b70-9c0b-95de301a180a", "IsFinished":"true"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 

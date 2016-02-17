@@ -1,13 +1,17 @@
 ﻿using SocialGamification;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
 public class ServerManager : NetworkBehaviour
 {
-	public static int IsSearching = 0;
+	public static int isSearching = 0;
+	public static Match currentMatch { get; set; }
 
-	public static Match CurrentMatch { get; set; }
+    private bool checkingScore = false;
+    private double timeInterval = 3f;
+    private DateTime lastRequestTime = new DateTime(1337, 1, 1);
 
 	// Use this for initialization
 	private void Start()
@@ -30,6 +34,20 @@ public class ServerManager : NetworkBehaviour
 		});
 	}
 
+    void Update()
+    {
+        if (checkingScore) 
+        {
+            if (lastRequestTime.Year == 1337 || lastRequestTime.AddSeconds(timeInterval) < DateTime.Now)
+            {
+                lastRequestTime = DateTime.Now;
+                Debug.Log("Checking Matches");
+
+                CheckOpponentScore();
+            }
+        }
+    }
+
 	public static void SetIsSearching(int val)
 	{
 		SocialGamificationManager.localUser.customData["isSearching"] = val;
@@ -37,11 +55,11 @@ public class ServerManager : NetworkBehaviour
 		{
 			if (success)
 			{
-				IsSearching = val;
+				isSearching = val;
 			}
 			else
 			{
-				SocialGamificationManager.localUser.customData["isSearching"] = IsSearching;
+				SocialGamificationManager.localUser.customData["isSearching"] = isSearching;
 			}
 		});
 	}
@@ -63,7 +81,7 @@ public class ServerManager : NetworkBehaviour
 				}
 				else
 				{
-					CurrentMatch = match;
+					currentMatch = match;
 					Debug.Log("Made match: " + match);
 				}
 			});
@@ -72,14 +90,41 @@ public class ServerManager : NetworkBehaviour
 
     public void EndMatch(int score)
     {
-        CurrentMatch.Score((float)score, (bool success, string err) => {
+        currentMatch.Score((float)score, (bool success, string err) => {
             Debug.Log("Success: " + success + ". Error: " + err);
-            CurrentMatch.End();
+            checkingScore = true;
         });
     }
 
-	// Update is called once per frame
-	private void Update()
-	{
-	}
+    private void CheckOpponentScore()
+    {
+        Match match = currentMatch;
+
+        if (match != null)
+        {
+            match.GetScore((bool success, float opponentScore, float ownScore, string error) =>
+            {
+                if (success)
+                {
+                    if (opponentScore != null)
+                    {
+                        checkingScore = false;
+                        currentMatch.End();
+                    }
+                    else
+                    {
+                        Debug.Log("Opponent has not updated score yet.");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Couldn't get score: " + error);
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("NO CURRENT MATCH");
+        }
+    }
 }

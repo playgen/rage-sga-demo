@@ -34,7 +34,7 @@ public class ButtonNetworkManager : NetworkManager
 						if (!match.finished)
 						{
 							Debug.Log("Found match with " + match.users);
-							ServerManager.CurrentMatch = match;
+							ServerManager.currentMatch = match;
                             //Start Game
                             GameController.controller.GetComponent<GameController>().StartGame();
 							return;
