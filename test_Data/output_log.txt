@@ -14,18 +14,22 @@ Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityE
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.161 seconds
+- Completed reload, in  0.128 seconds
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.998255 ms
+UnloadTime: 0.648397 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: b71c -> priority: 1 
-  Thread -> id: d024 -> priority: 1 
-[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/17/2016 5:32 PM
+  Thread -> id: ae48 -> priority: 1 
+  Thread -> id: bb0c -> priority: 1 
+[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/18/2016 10:25 AM
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -37,31 +41,35 @@ Made match: SocialGamification.Match
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 1
+Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 2
+CheckWin: Red = 1, Blue = 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 3
+Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 4
+CheckWin: Red = 1, Blue = 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 5
+CheckWin: Red = 2, Blue = 1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 6
+CheckWin: Red = 2, Blue = 2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 5
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 2, Blue = 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -69,275 +77,11 @@ CheckWin: Red = 2, Blue = 4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 3, Blue = 3
+CheckWin: Red = 2, Blue = 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 4, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 8, Blue = 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 7, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 2, Blue = 7
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
+CheckWin: Red = 2, Blue = 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -349,7 +93,15 @@ CheckWin: Red = 1, Blue = 8
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 0, Blue = 9
+CheckWin: Red = 2, Blue = 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 3, Blue = 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 3, Blue = 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -357,11 +109,15 @@ Setwinner: False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"ActorId":"eefdd29e-19e1-4843-9900-b955a8cd3440", "Score":"9", "RoundNumber":"1"}
+{"ActorId":"0a3cd589-fba8-4b37-b4a4-a7708c505f30", "Score":"6", "RoundNumber":"1"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Score Text: {"$id":"1","roundNumber":1,"matchActorId":"7babb72b-0701-45a8-a4d0-ca37a52f468e","matchActor":{"$id":"2","matchId":"76d22a1c-d3ce-4f2f-bf52-ac4bf82c29e2","match":{"$id":"3","tournamentId":"2f8fc280-8b30-4de3-8d4d-6cd376fa222d","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"76d22a1c-d3ce-4f2f-bf52-ac4bf82c29e2","match":{"$ref":"3"},"actorId":"32963c07-d7e8-493d-adc2-3b015e7f1997","actor":null,"customData":null,"id":"45e7baec-ea2a-449f-bfdc-8c94f54edd23","updatedDate":"2016-02-17T17:33:27","createdDate":"2016-02-17T17:33:27"},{"$ref":"2"}],"customData":null,"id":"76d22a1c-d3ce-4f2f-bf52-ac4bf82c29e2","updatedDate":"2016-02-17T17:33:27","createdDate":"2016-02-17T17:33:27"},"actorId":"eefdd29e-19e1-4843-9900-b955a8cd3440","actor":{"$id":"5","username":"matt","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"eefdd29e-19e1-4843-9900-b955a8cd3440","updatedDate":"2016-02-17T17:13:40","createdDate":"2016-02-17T17:13:40"},"customData":null,"id":"7babb72b-0701-45a8-a4d0-ca37a52f468e","updatedDate":"2016-02-17T17:33:27","createdDate":"2016-02-17T17:33:27"},"score":9,"dateScore":"2016-02-17T17:34:13.2477011+00:00","id":"30752ebd-530b-4416-8e7b-036cce20aad2","updatedDate":"2016-02-17T17:34:13.2688019+00:00","createdDate":"2016-02-17T17:33:27"}
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"f82ed861-3c22-402e-b376-81b3836b6b69","matchActor":{"$id":"2","matchId":"f7fe8d2d-eaf6-46a7-a11f-8ea8c42ef943","match":{"$id":"3","tournamentId":"9d76c595-8ff2-4ee9-a8c6-f0cc89595dda","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"f7fe8d2d-eaf6-46a7-a11f-8ea8c42ef943","match":{"$ref":"3"},"actorId":"17f9e5d1-6c06-4033-8946-383397d40c35","actor":null,"customData":null,"id":"119805f7-a521-440c-9f96-e7cad615cd8a","updatedDate":"2016-02-18T10:25:22","createdDate":"2016-02-18T10:25:22"},{"$ref":"2"}],"customData":null,"id":"f7fe8d2d-eaf6-46a7-a11f-8ea8c42ef943","updatedDate":"2016-02-18T10:25:22","createdDate":"2016-02-18T10:25:22"},"actorId":"0a3cd589-fba8-4b37-b4a4-a7708c505f30","actor":{"$id":"5","username":"matt","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"0a3cd589-fba8-4b37-b4a4-a7708c505f30","updatedDate":"2016-02-18T10:24:04","createdDate":"2016-02-18T10:24:04"},"customData":null,"id":"f82ed861-3c22-402e-b376-81b3836b6b69","updatedDate":"2016-02-18T10:25:22","createdDate":"2016-02-18T10:25:22"},"score":6,"dateScore":"2016-02-18T10:25:33.7508893+00:00","id":"2e44f9b9-9dd9-436d-80b6-34c3363ec913","updatedDate":"2016-02-18T10:25:33.7523896+00:00","createdDate":"2016-02-18T10:25:22"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -381,11 +137,11 @@ foreach actor: System.Collections.Hashtable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-eefdd29e-19e1-4843-9900-b955a8cd3440
+0a3cd589-fba8-4b37-b4a4-a7708c505f30
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-MyScore : 9
+MyScore : 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -393,15 +149,135 @@ foreach actor: System.Collections.Hashtable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-32963c07-d7e8-493d-adc2-3b015e7f1997
+17f9e5d1-6c06-4033-8946-383397d40c35
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-OpponentScore : 0
+OpponentScore : 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"Id":"76d22a1c-d3ce-4f2f-bf52-ac4bf82c29e2", "TournamentId":"2f8fc280-8b30-4de3-8d4d-6cd376fa222d", "IsFinished":"true"}
+{"Id":"f7fe8d2d-eaf6-46a7-a11f-8ea8c42ef943", "TournamentId":"9d76c595-8ff2-4ee9-a8c6-f0cc89595dda", "IsFinished":"true"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
