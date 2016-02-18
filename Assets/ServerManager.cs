@@ -82,6 +82,7 @@ public class ServerManager : NetworkBehaviour
 				else
 				{
 					currentMatch = match;
+                    // DO STUFF HERE
 					Debug.Log("Made match: " + match);
 				}
 			});
