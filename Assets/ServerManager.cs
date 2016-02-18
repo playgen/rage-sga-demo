@@ -30,22 +30,56 @@ public class ServerManager : NetworkBehaviour
 			{
 				SetIsSearching(1);
 			}
-			JoinMatch();
+            else
+            {
+                JoinMatch();
+            }
 		});
 	}
 
     void Update()
     {
-        if (checkingScore) 
+        if (lastRequestTime.Year == 1337 || lastRequestTime.AddSeconds(timeInterval) < DateTime.Now)
         {
-            if (lastRequestTime.Year == 1337 || lastRequestTime.AddSeconds(timeInterval) < DateTime.Now)
-            {
-                lastRequestTime = DateTime.Now;
-                Debug.Log("Checking Matches");
+            lastRequestTime = DateTime.Now;
+            Debug.Log("Checking Matches");
 
+            if (isServer && isSearching == 1 && !GameController.singleton.gameInProgress)
+            {
+                SearchMatch();
+            }
+
+            if (checkingScore)
+            {
                 CheckOpponentScore();
             }
         }
+    }
+
+    void SearchMatch()
+    {
+        Match.Load("0", true, string.Empty, (Match[] matches) =>
+        {
+            if (matches.Length == 0)
+            {
+                Debug.Log("No match");
+            }
+            else
+            {
+                foreach (Match match in matches)
+                {
+                    if (!match.finished)
+                    {
+                        Debug.Log("Found match with " + match.users);
+                        ServerManager.currentMatch = match;
+                        //Start Game
+                        GameController.controller.GetComponent<GameController>().StartGame();
+                        SetIsSearching(0);
+                        return;
+                    }
+                }
+            }
+        });
     }
 
 	public static void SetIsSearching(int val)
