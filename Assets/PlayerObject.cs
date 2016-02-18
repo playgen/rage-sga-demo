@@ -46,4 +46,16 @@ public class PlayerObject : NetworkBehaviour
         gameControllerScript.SetScore(tile, newState);
 		tile.GetComponent<SpaceScript>().SetState(newState);
 	}
+
+    [Command]
+    public void CmdResetGame()
+    {
+        Debug.Log("RESET CLICK COMMMANDER");
+        var objects = GameObject.FindObjectsOfType<SpaceScript>();
+        foreach (var obj in objects)
+        {
+            Destroy(obj.gameObject);
+        }
+        GameController.singleton.GetComponent<GameController>().OnStartServer();
+    }
 }

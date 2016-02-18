@@ -14,9 +14,159 @@ Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityE
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.073 seconds
+- Completed reload, in  0.145 seconds
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.853671 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: d1a0 -> priority: 1 
+  Thread -> id: f7ac -> priority: 1 
+[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/18/2016 5:42 PM
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Username":"mayur", "CustomData":[{"value":1, "key":"isSearching"}]}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Found match with System.Collections.Generic.List`1[SocialGamification.MatchActor]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Start Game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Username":"mayur", "CustomData":[{"value":0, "key":"isSearching"}]}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 0, Blue = 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 1, Blue = 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+RESET CLICK COMMMANDER
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 1, Blue = 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setwinner: True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"ActorId":"604067a1-b6b3-47fa-afef-5e2f19fd098c", "Score":"1", "RoundNumber":"1"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+CheckWin: Red = 1, Blue = 6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setwinner: True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"ActorId":"604067a1-b6b3-47fa-afef-5e2f19fd098c", "Score":"1", "RoundNumber":"1"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"103c826a-13c5-4c9b-9af4-59c796b05c46","matchActor":{"$id":"2","matchId":"e35b552e-e778-40ca-957a-9f13919e54f3","match":{"$id":"3","tournamentId":"81a7db19-607a-4de2-b043-7b4e3b174677","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$ref":"2"},{"$id":"4","matchId":"e35b552e-e778-40ca-957a-9f13919e54f3","match":{"$ref":"3"},"actorId":"876d289e-8455-4226-9dbc-897bf6c677ac","actor":null,"customData":null,"updatedDate":"2016-02-18T17:11:42","createdDate":"2016-02-18T17:11:42","id":"e315acda-ce54-4b4c-adec-93f86e72836e"}],"customData":null,"updatedDate":"2016-02-18T17:11:41","createdDate":"2016-02-18T17:11:41","id":"e35b552e-e778-40ca-957a-9f13919e54f3"},"actorId":"604067a1-b6b3-47fa-afef-5e2f19fd098c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"updatedDate":"2016-02-18T17:42:39","createdDate":"2016-02-18T14:45:45","id":"604067a1-b6b3-47fa-afef-5e2f19fd098c"},"customData":null,"updatedDate":"2016-02-18T17:11:42","createdDate":"2016-02-18T17:11:42","id":"103c826a-13c5-4c9b-9af4-59c796b05c46"},"score":1,"dateScore":"2016-02-18T17:42:49.8227774+00:00","updatedDate":"2016-02-18T17:42:49.8227774+00:00","createdDate":"2016-02-18T17:11:42","id":"358e8efc-9d19-4f24-88e8-8f1acec14613"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Success: True. Error: 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"103c826a-13c5-4c9b-9af4-59c796b05c46","matchActor":{"$id":"2","matchId":"e35b552e-e778-40ca-957a-9f13919e54f3","match":{"$id":"3","tournamentId":"81a7db19-607a-4de2-b043-7b4e3b174677","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$ref":"2"},{"$id":"4","matchId":"e35b552e-e778-40ca-957a-9f13919e54f3","match":{"$ref":"3"},"actorId":"876d289e-8455-4226-9dbc-897bf6c677ac","actor":null,"customData":null,"updatedDate":"2016-02-18T17:11:42","createdDate":"2016-02-18T17:11:42","id":"e315acda-ce54-4b4c-adec-93f86e72836e"}],"customData":null,"updatedDate":"2016-02-18T17:11:41","createdDate":"2016-02-18T17:11:41","id":"e35b552e-e778-40ca-957a-9f13919e54f3"},"actorId":"604067a1-b6b3-47fa-afef-5e2f19fd098c","actor":{"$id":"5","username":"mayur","email":null,"role":1,"groups":null,"isEnabled":true,"updatedDate":"2016-02-18T17:42:39","createdDate":"2016-02-18T14:45:45","id":"604067a1-b6b3-47fa-afef-5e2f19fd098c"},"customData":null,"updatedDate":"2016-02-18T17:11:42","createdDate":"2016-02-18T17:11:42","id":"103c826a-13c5-4c9b-9af4-59c796b05c46"},"score":1,"dateScore":"2016-02-18T17:42:49.8227774+00:00","updatedDate":"2016-02-18T17:42:49.8227774+00:00","createdDate":"2016-02-18T17:11:42","id":"358e8efc-9d19-4f24-88e8-8f1acec14613"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Success: True. Error: 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+HashContains actors
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+604067a1-b6b3-47fa-afef-5e2f19fd098c
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MyScore : 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Couldn't get score: 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:62123}

@@ -42,6 +42,23 @@ public class GameController : NetworkBehaviour
         timerScript.StartTimer();
     }
 
+
+    public void OnResetClick()
+    {
+        GameObject currentPlayer = GetPlayer();
+        currentPlayer.GetComponent<PlayerObject>().CmdResetGame();
+    }
+
+    [Command]
+    public void CmdResetGame()
+    {
+        var objects = GameObject.FindObjectsOfType<SpaceScript>();
+        foreach (var obj in objects) {
+            Destroy(obj.gameObject);
+        }
+        OnStartServer();
+    }
+
 	private void Update()
 	{
         if (gameInProgress)
