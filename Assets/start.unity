@@ -541,7 +541,7 @@ GameObject:
   - 114: {fileID: 886992486}
   - 114: {fileID: 886992485}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Reset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 886992486}
   m_OnClick:
     m_PersistentCalls:
@@ -956,8 +956,8 @@ MonoBehaviour:
   dontDestroyOnLoad: 1
   setAsDefaultSocialPlatform: 0
   secretKey: 
-  urlRootProduction: 
-  urlRootStage: http://sga.playgen.com/
+  urlRootProduction: http://sga.playgen.com/
+  urlRootStage: https://localhost:44363/
   useStage: 1
   logDebugInfo: 0
   pingIntervalSeconds: 30

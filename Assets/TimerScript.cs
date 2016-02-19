@@ -18,6 +18,12 @@ public class TimerScript : MonoBehaviour {
         startTimer = true;
     }
 
+    public void ResetTimer()
+    {
+        timeLeft = startTime;
+        startTimer = true;
+    }
+
 	// Update is called once per frame
 	void Update () {
         if (startTimer)

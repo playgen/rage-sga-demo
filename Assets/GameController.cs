@@ -8,11 +8,13 @@ public class GameController : NetworkBehaviour
 	public static GameController singleton;
     private ServerManager serverManager;
 
+    //UI
 	public TimerScript timerScript { get; private set; }
 	[SyncVar(hook="OnTimeChange")]
 	private string timer = "";
     private Text timerText;
     private string timeDecimalPoint = "0.00";
+    private Button resetBtn;
 
 	public GameObject spaceprefab;
 	private GameObject _player;
@@ -32,6 +34,7 @@ public class GameController : NetworkBehaviour
         singleton = this;
 		timerScript = FindObjectOfType<TimerScript>();
         timerText = GameObject.Find("Timer").GetComponent<Text>();
+        resetBtn = GameObject.Find("Reset").GetComponent<Button>();
         serverManager = GameObject.Find("ServerManager").GetComponent<ServerManager>();
 	}
 
@@ -42,21 +45,37 @@ public class GameController : NetworkBehaviour
         timerScript.StartTimer();
     }
 
-
-    public void OnResetClick()
+    public void ToggleBtn()
     {
-        GameObject currentPlayer = GetPlayer();
-        currentPlayer.GetComponent<PlayerObject>().CmdResetGame();
+        if (resetBtn.interactable)
+        {
+            resetBtn.interactable = false;
+        }
+        else
+        {
+            resetBtn.interactable = true;
+        }
     }
 
-    [Command]
-    public void CmdResetGame()
+    public void ResetGame()
     {
+        ToggleBtn();
         var objects = GameObject.FindObjectsOfType<SpaceScript>();
-        foreach (var obj in objects) {
+        foreach (var obj in objects)
+        {
             Destroy(obj.gameObject);
         }
         OnStartServer();
+        blueCount = 0;
+        redCount = 0;
+        // SGA Match.REstart() then do this in callback:
+        gameInProgress = true;
+        timerScript.ResetTimer();
+    }
+
+    public void OnResetClick()
+    {
+        GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
     }
 
 	private void Update()

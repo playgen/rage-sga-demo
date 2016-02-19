@@ -7,6 +7,14 @@ using UnityEngine.UI;
 public class PlayerObject : NetworkBehaviour
 {
     private GameController gameControllerScript;
+
+    private PlayerObject singleton;
+
+    private void Awake()
+    {
+        singleton = this;
+    }
+
 	private void Start()
 	{
         gameControllerScript = GameController.singleton.GetComponent<GameController>();
@@ -47,15 +55,10 @@ public class PlayerObject : NetworkBehaviour
 		tile.GetComponent<SpaceScript>().SetState(newState);
 	}
 
+
     [Command]
     public void CmdResetGame()
     {
-        Debug.Log("RESET CLICK COMMMANDER");
-        var objects = GameObject.FindObjectsOfType<SpaceScript>();
-        foreach (var obj in objects)
-        {
-            Destroy(obj.gameObject);
-        }
-        GameController.singleton.GetComponent<GameController>().OnStartServer();
+        gameControllerScript.ResetGame();
     }
 }

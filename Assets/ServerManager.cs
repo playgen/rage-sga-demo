@@ -145,6 +145,7 @@ public class ServerManager : NetworkBehaviour
                     {
                         checkingScore = false;
                         currentMatch.End();
+                        GameController.controller.GetComponent<GameController>().ToggleBtn();
                     }
                     else
                     {
