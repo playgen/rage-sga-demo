@@ -14,18 +14,18 @@ Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityE
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.138 seconds
+- Completed reload, in  0.170 seconds
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ben\Documents\buttonbashers\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.954563 ms
+UnloadTime: 0.844746 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 11070 -> priority: 1 
-  Thread -> id: 10acc -> priority: 1 
-[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/19/2016 11:20 AM
+  Thread -> id: 1db14 -> priority: 1 
+  Thread -> id: 1a6a4 -> priority: 1 
+[SocialGamification Server Info] Version: 0.0.1 (match) | Time: 2/25/2016 8:59 AM
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -45,71 +45,11 @@ Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 1, Blue = 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 2, Blue = 0
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
 Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-CheckWin: Red = 2, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 1
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
 Checking Matches
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 6, Blue = 3
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 5, Blue = 4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 4, Blue = 5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-Checking Matches
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 3, Blue = 6
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 2, Blue = 7
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
-
-CheckWin: Red = 2, Blue = 7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -117,11 +57,15 @@ Setwinner: False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"ActorId":"6e7a618b-dfae-4245-a9a9-9aff22e68b3b", "Score":"7", "RoundNumber":"1"}
+{"ActorId":"59c27182-1977-4fd4-97f5-db4f82732375", "Score":"3", "RoundNumber":"1"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-Score Text: {"$id":"1","roundNumber":1,"matchActorId":"e9426915-ac40-46b6-8be6-4bbc8ce6639c","matchActor":{"$id":"2","matchId":"23f34c67-bdb7-4bf2-bd25-7f26d96d4faf","match":{"$id":"3","tournamentId":"ac1d3469-e72a-4f12-bcb9-758327c34c01","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$ref":"2"},{"$id":"4","matchId":"23f34c67-bdb7-4bf2-bd25-7f26d96d4faf","match":{"$ref":"3"},"actorId":"d7304dd8-74f0-4ed9-a64c-6028b1f4255a","actor":null,"customData":null,"id":"e84cba5f-8f50-4497-851a-e34eb183b86f","updatedDate":"2016-02-19T11:20:15","createdDate":"2016-02-19T11:20:15"}],"customData":null,"id":"23f34c67-bdb7-4bf2-bd25-7f26d96d4faf","updatedDate":"2016-02-19T11:20:15","createdDate":"2016-02-19T11:20:15"},"actorId":"6e7a618b-dfae-4245-a9a9-9aff22e68b3b","actor":{"$id":"5","username":"matt","email":null,"role":1,"groups":null,"isEnabled":true,"achievements":null,"customData":null,"files":null,"fileActivities":null,"inventories":null,"items":null,"platforms":null,"id":"6e7a618b-dfae-4245-a9a9-9aff22e68b3b","updatedDate":"2016-02-19T11:19:44","createdDate":"2016-02-19T11:19:44"},"customData":null,"id":"e9426915-ac40-46b6-8be6-4bbc8ce6639c","updatedDate":"2016-02-19T11:20:15","createdDate":"2016-02-19T11:20:15"},"score":7,"dateScore":"2016-02-19T11:20:28.5161796+00:00","id":"fdde9b78-ed52-430e-a05c-330bf9c95402","updatedDate":"2016-02-19T11:20:28.536682+00:00","createdDate":"2016-02-19T11:20:15"}
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"2ddf5d9e-8d59-447a-98f1-62bd489af368","matchActor":{"$id":"2","matchId":"4781e7c4-4f21-4560-9963-6ef244a78518","match":{"$id":"3","tournamentId":"61c97948-b906-4e1f-9470-262a91527c37","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"4781e7c4-4f21-4560-9963-6ef244a78518","match":{"$ref":"3"},"actorId":"4fe6e872-465a-40ef-8155-87d6bf9c7f6b","actor":null,"customData":null,"updatedDate":"2016-02-25T08:59:41","createdDate":"2016-02-25T08:59:41","id":"ef69a8af-1970-4d13-9870-f81fe35f3680"},{"$ref":"2"}],"customData":null,"updatedDate":"2016-02-25T08:59:41","createdDate":"2016-02-25T08:59:41","id":"4781e7c4-4f21-4560-9963-6ef244a78518"},"actorId":"59c27182-1977-4fd4-97f5-db4f82732375","actor":{"$id":"5","username":"matt","email":null,"role":1,"groups":null,"isEnabled":true,"updatedDate":"2016-02-25T08:59:04","createdDate":"2016-02-25T08:59:04","id":"59c27182-1977-4fd4-97f5-db4f82732375"},"customData":null,"updatedDate":"2016-02-25T08:59:41","createdDate":"2016-02-25T08:59:41","id":"2ddf5d9e-8d59-447a-98f1-62bd489af368"},"score":3,"dateScore":"2016-02-25T08:59:52.385891+00:00","updatedDate":"2016-02-25T08:59:52.4073907+00:00","createdDate":"2016-02-25T08:59:41","id":"37c05cb3-05db-44c3-9315-9f8d4e12c032"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -141,11 +85,11 @@ foreach actor: System.Collections.Hashtable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-d7304dd8-74f0-4ed9-a64c-6028b1f4255a
+4fe6e872-465a-40ef-8155-87d6bf9c7f6b
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-OpponentScore : 2
+OpponentScore : 6
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
@@ -153,19 +97,195 @@ foreach actor: System.Collections.Hashtable
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-6e7a618b-dfae-4245-a9a9-9aff22e68b3b
+59c27182-1977-4fd4-97f5-db4f82732375
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-MyScore : 7
+MyScore : 3
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-{"Id":"23f34c67-bdb7-4bf2-bd25-7f26d96d4faf", "TournamentId":"ac1d3469-e72a-4f12-bcb9-758327c34c01", "IsFinished":"true"}
+{"Id":"4781e7c4-4f21-4560-9963-6ef244a78518", "TournamentId":"61c97948-b906-4e1f-9470-262a91527c37", "IsFinished":"true"}
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 
-WOO
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Username":"matt", "CustomData":[{"value":1, "key":"isSearching"}]}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Found match with System.Collections.Generic.List`1[SocialGamification.MatchActor]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+match found and im the client
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Username":"matt", "CustomData":[{"value":0, "key":"isSearching"}]}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setwinner: False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"ActorId":"59c27182-1977-4fd4-97f5-db4f82732375", "Score":"8", "RoundNumber":"1"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Score Text: {"$id":"1","roundNumber":1,"matchActorId":"fb407df6-cb9b-4fb3-9637-9c4102ee75f7","matchActor":{"$id":"2","matchId":"1878f32d-17e0-4f2a-94ff-07b42853fed6","match":{"$id":"3","tournamentId":"faf562db-e06a-4deb-9c90-35b8c9ed91a4","tournament":null,"title":"Test","expirationDate":null,"totalRounds":1,"isFinished":false,"isDeleted":false,"actors":[{"$id":"4","matchId":"1878f32d-17e0-4f2a-94ff-07b42853fed6","match":{"$ref":"3"},"actorId":"4fe6e872-465a-40ef-8155-87d6bf9c7f6b","actor":null,"customData":null,"updatedDate":"2016-02-25T08:59:59","createdDate":"2016-02-25T08:59:59","id":"caff27b5-6dcb-434a-a1bd-ade4f028e92b"},{"$ref":"2"}],"customData":null,"updatedDate":"2016-02-25T08:59:59","createdDate":"2016-02-25T08:59:59","id":"1878f32d-17e0-4f2a-94ff-07b42853fed6"},"actorId":"59c27182-1977-4fd4-97f5-db4f82732375","actor":{"$id":"5","username":"matt","email":null,"role":1,"groups":null,"isEnabled":true,"updatedDate":"2016-02-25T09:00:01","createdDate":"2016-02-25T08:59:04","id":"59c27182-1977-4fd4-97f5-db4f82732375"},"customData":null,"updatedDate":"2016-02-25T08:59:59","createdDate":"2016-02-25T08:59:59","id":"fb407df6-cb9b-4fb3-9637-9c4102ee75f7"},"score":8,"dateScore":"2016-02-25T09:00:12.56989+00:00","updatedDate":"2016-02-25T09:00:12.5708909+00:00","createdDate":"2016-02-25T08:59:59","id":"7a299f29-7abc-4a15-90ef-2ef1f4aa616b"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Success: True. Error: 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+HashContains actors
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+4fe6e872-465a-40ef-8155-87d6bf9c7f6b
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+OpponentScore : 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+foreach actor: System.Collections.Hashtable
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+59c27182-1977-4fd4-97f5-db4f82732375
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+MyScore : 8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+{"Id":"1878f32d-17e0-4f2a-94ff-07b42853fed6", "TournamentId":"faf562db-e06a-4deb-9c90-35b8c9ed91a4", "IsFinished":"true"}
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Checking Matches
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
 

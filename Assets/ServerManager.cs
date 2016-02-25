@@ -7,6 +7,7 @@ using UnityEngine.Networking;
 public class ServerManager : NetworkBehaviour
 {
 	public static int isSearching = 0;
+
 	public static Match currentMatch { get; set; }
 
     private bool checkingScore = false;
@@ -44,7 +45,7 @@ public class ServerManager : NetworkBehaviour
             lastRequestTime = DateTime.Now;
             Debug.Log("Checking Matches");
 
-            if (isServer && isSearching == 1 && !GameController.singleton.gameInProgress)
+            if (isSearching == 1 && !GameController.singleton.gameInProgress)
             {
                 SearchMatch();
             }
@@ -56,9 +57,9 @@ public class ServerManager : NetworkBehaviour
         }
     }
 
-    void SearchMatch()
+    public void SearchMatch(string idTournament = "0")
     {
-        Match.Load("0", true, string.Empty, (Match[] matches) =>
+        Match.Load(idTournament, true, string.Empty, (Match[] matches) =>
         {
             if (matches.Length == 0)
             {
@@ -73,7 +74,15 @@ public class ServerManager : NetworkBehaviour
                         Debug.Log("Found match with " + match.users);
                         ServerManager.currentMatch = match;
                         //Start Game
-                        GameController.controller.GetComponent<GameController>().StartGame();
+                        if (isServer)
+                        {
+                            GameController.controller.GetComponent<GameController>().StartGame();
+                        }
+                        else
+                        {
+                            Debug.Log("match found and im the client");
+                            GameController.singleton.GetPlayer().GetComponent<PlayerObject>().CmdStartGame();
+                        }
                         SetIsSearching(0);
                         return;
                     }
@@ -115,13 +124,23 @@ public class ServerManager : NetworkBehaviour
 				}
 				else
 				{
-					currentMatch = match;
+					ServerManager.currentMatch = match;
                     // DO STUFF HERE
 					Debug.Log("Made match: " + match);
 				}
 			});
 		}
 	}
+
+    public void RestartMatch(Action<Match> callback)
+    {
+        Debug.Log("RestartMatch");
+        Match currentMatchClone = new Match(currentMatch);
+        currentMatchClone.Duplicate((Match match) =>
+        {
+            callback(match);
+        });
+    }
 
     public void EndMatch(int score)
     {

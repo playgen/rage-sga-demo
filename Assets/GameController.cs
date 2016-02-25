@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using SocialGamification;
 
 public class GameController : NetworkBehaviour
 {
@@ -42,7 +43,7 @@ public class GameController : NetworkBehaviour
     {
         Debug.Log("Start Game");
         gameInProgress = true;
-        timerScript.StartTimer();
+        timerScript.ResetTimer();
     }
 
     public void ToggleBtn()
@@ -59,22 +60,34 @@ public class GameController : NetworkBehaviour
 
     public void ResetGame()
     {
+        Debug.Log("Reset Game");
         ToggleBtn();
         var objects = GameObject.FindObjectsOfType<SpaceScript>();
         foreach (var obj in objects)
         {
             Destroy(obj.gameObject);
         }
-        OnStartServer();
         blueCount = 0;
         redCount = 0;
-        // SGA Match.REstart() then do this in callback:
-        gameInProgress = true;
-        timerScript.ResetTimer();
+        OnStartServer();
+        serverManager.RestartMatch((Match match) => 
+        {
+            ServerManager.currentMatch = match; // put this back in servermanager if works
+            RpcClientJoinGame(match.idTournament);
+        });
+       
+    }
+
+    [ClientRpc]
+    private void RpcClientJoinGame(string idTournament)
+    {
+        //serverManager.SearchMatch();
+        ServerManager.SetIsSearching(1);
     }
 
     public void OnResetClick()
     {
+        Debug.Log("Reset Clicked");
         GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
     }
 
@@ -133,7 +146,7 @@ public class GameController : NetworkBehaviour
         {
             gameEnd = gameInProgress;
         }
-        Debug.Log("CheckWin: Red = " + redCount + ", Blue = " + blueCount);
+        //Debug.Log("CheckWin: Red = " + redCount + ", Blue = " + blueCount);
         bool scoreSent = false;
         if (redCount == 9)
 		{

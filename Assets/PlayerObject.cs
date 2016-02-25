@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using SocialGamification;
 
 public class PlayerObject : NetworkBehaviour
 {
@@ -55,10 +56,16 @@ public class PlayerObject : NetworkBehaviour
 		tile.GetComponent<SpaceScript>().SetState(newState);
 	}
 
-
     [Command]
     public void CmdResetGame()
     {
         gameControllerScript.ResetGame();
+    }
+
+    [Command]
+    public void CmdStartGame()
+    {
+        Debug.Log("CMD START GAME");
+        gameControllerScript.StartGame();
     }
 }
