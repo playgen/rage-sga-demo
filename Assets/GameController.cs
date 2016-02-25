@@ -60,7 +60,8 @@ public class GameController : NetworkBehaviour
 
     public void ResetGame()
     {
-        Debug.Log("Reset Game");
+        Debug.Log("Reset Game. Server: " + isServer);
+        /*
         ToggleBtn();
         var objects = GameObject.FindObjectsOfType<SpaceScript>();
         foreach (var obj in objects)
@@ -75,7 +76,7 @@ public class GameController : NetworkBehaviour
             ServerManager.currentMatch = match; // put this back in servermanager if works
             RpcClientJoinGame(match.idTournament);
         });
-       
+       */
     }
 
     [ClientRpc]
@@ -97,10 +98,11 @@ public class GameController : NetworkBehaviour
         {
             double timeLeft = timerScript.timeLeft;
             TruncateTime(timeLeft);
-            if (timeLeft == 0)
+            if (timeLeft <= 0)
             {
+                Debug.Log("TimeUp");
                 gameInProgress = false;
-                CheckWin();
+                //CheckWin();
                 RpcClientCheckWin();
             }
         }   
@@ -110,6 +112,7 @@ public class GameController : NetworkBehaviour
     private void RpcClientCheckWin()
     {
         //Force Game End on Client
+        Debug.Log("RPCClientWin. Server: " + isServer);
         CheckWin(true);
     }
 
@@ -137,16 +140,16 @@ public class GameController : NetworkBehaviour
 
 	public void CheckWin(bool forceGameEnd = false)
 	{
-        bool gameEnd;
+        bool gameEnded;
         if (forceGameEnd)
         {
-            gameEnd = false;
+            gameEnded = true;
         }
         else
         {
-            gameEnd = gameInProgress;
+            gameEnded = !gameInProgress;
         }
-        //Debug.Log("CheckWin: Red = " + redCount + ", Blue = " + blueCount);
+
         bool scoreSent = false;
         if (redCount == 9)
 		{
@@ -160,7 +163,7 @@ public class GameController : NetworkBehaviour
             scoreSent = true;
 		}
         
-        if (!scoreSent && !gameEnd)
+        if (!scoreSent && gameEnded)
         {
             if (redCount > blueCount)
             {

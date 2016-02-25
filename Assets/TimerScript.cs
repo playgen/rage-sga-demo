@@ -20,6 +20,7 @@ public class TimerScript : MonoBehaviour {
 
     public void ResetTimer()
     {
+        Debug.Log("resetTimer");
         timeLeft = startTime;
         startTimer = true;
     }
@@ -31,6 +32,7 @@ public class TimerScript : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {
+                Debug.Log("TimeScriptTimeUp");
                 timeLeft = 0;
                 startTimer = false;
             }

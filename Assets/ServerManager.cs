@@ -43,10 +43,10 @@ public class ServerManager : NetworkBehaviour
         if (lastRequestTime.Year == 1337 || lastRequestTime.AddSeconds(timeInterval) < DateTime.Now)
         {
             lastRequestTime = DateTime.Now;
-            Debug.Log("Checking Matches");
 
             if (isSearching == 1 && !GameController.singleton.gameInProgress)
             {
+                Debug.Log("Checking Matches");
                 SearchMatch();
             }
 
@@ -74,16 +74,7 @@ public class ServerManager : NetworkBehaviour
                         Debug.Log("Found match with " + match.users);
                         ServerManager.currentMatch = match;
                         //Start Game
-                        if (isServer)
-                        {
-                            GameController.controller.GetComponent<GameController>().StartGame();
-                        }
-                        else
-                        {
-                            Debug.Log("match found and im the client");
-                            GameController.singleton.GetPlayer().GetComponent<PlayerObject>().CmdStartGame();
-                        }
-                        SetIsSearching(0);
+                        SetIsSearching(0, true, isServer);
                         return;
                     }
                 }
@@ -91,17 +82,34 @@ public class ServerManager : NetworkBehaviour
         });
     }
 
-	public static void SetIsSearching(int val)
+	public static void SetIsSearching(int val, bool startGame = false, bool server = true)
 	{
+        var oldVal = isSearching;
+        isSearching = val;
 		SocialGamificationManager.localUser.customData["isSearching"] = val;
 		SocialGamificationManager.localUser.Update((bool success, string error) =>
 		{
 			if (success)
 			{
 				isSearching = val;
+                if (startGame)
+                {
+                    if (server)
+                    {
+                        Debug.Log("match found and im the server");
+                        GameController.controller.GetComponent<GameController>().StartGame();
+                    }
+                    else
+                    {
+                        Debug.Log("match found and im the client");
+                        GameController.singleton.GetPlayer().GetComponent<PlayerObject>().CmdStartGame();
+                    }
+                }
 			}
 			else
 			{
+                Debug.Log("Success: " + success + ". Error: " + error + ". SetIsSearching");
+                isSearching = oldVal;
 				SocialGamificationManager.localUser.customData["isSearching"] = isSearching;
 			}
 		});
@@ -145,8 +153,16 @@ public class ServerManager : NetworkBehaviour
     public void EndMatch(int score)
     {
         currentMatch.Score((float)score, (bool success, string err) => {
-            Debug.Log("Success: " + success + ". Error: " + err);
-            checkingScore = true;
+            Debug.Log("Success: " + success + ". Error: " + err + ". EndMatch");
+            if (success)
+            {
+                checkingScore = true;       
+            }
+            else
+            {
+                Debug.Log("Trying to .score again");
+                EndMatch(score);                // this may fix our problem
+            }
         });
     }
 
@@ -162,6 +178,7 @@ public class ServerManager : NetworkBehaviour
                 {
                     if (opponentScore != null)
                     {
+                        Debug.Log("Found opponent score: " + opponentScore + ". Server: " + isServer);
                         checkingScore = false;
                         currentMatch.End();
                         GameController.controller.GetComponent<GameController>().ToggleBtn();
