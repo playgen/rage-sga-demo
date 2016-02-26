@@ -5,17 +5,25 @@ using UnityEngine.Networking;
 
 public class ButtonNetworkManager : NetworkManager
 {
-	// Use this for initialization
-	private void Start()
-	{
-	}
+    public override void OnServerDisconnect(NetworkConnection conn)
+    {
+        if (IsClientConnected())
+        {
+            ServerManager.currentMatch.Quit();
+            GameController.singleton.ResetGame();
+        }
+    }
 
-	// Update is called once per frame
-	private void Update()
-	{
-	}
+    public override void OnClientDisconnect(NetworkConnection conn)
+    {
+        if (IsClientConnected())
+        {
+            ServerManager.currentMatch.Quit();
+            GameController.singleton.ResetGame();
+        }
+    }
 
-	public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
 	{
 		base.OnServerAddPlayer(conn, playerControllerId);
 	}
