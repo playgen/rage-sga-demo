@@ -41,7 +41,6 @@ public class GameController : NetworkBehaviour
 
     public void StartGame()
     {
-        Debug.Log("Start Game");
         gameInProgress = true;
         timerScript.ResetTimer();
     }
@@ -61,26 +60,29 @@ public class GameController : NetworkBehaviour
     public void ResetGame()
     {
         Debug.Log("Reset Game. Server: " + isServer);
-        /*
-        ToggleBtn();
-        var objects = GameObject.FindObjectsOfType<SpaceScript>();
-        foreach (var obj in objects)
-        {
-            Destroy(obj.gameObject);
-        }
-        blueCount = 0;
-        redCount = 0;
-        OnStartServer();
-        serverManager.RestartMatch((Match match) => 
-        {
-            ServerManager.currentMatch = match; // put this back in servermanager if works
-            RpcClientJoinGame(match.idTournament);
-        });
-       */
+ 
+        //ToggleBtn();
+        //var objects = GameObject.FindObjectsOfType<SpaceScript>();
+        //foreach (var obj in objects)
+        //{
+        //    Destroy(obj.gameObject);
+        //}
+        //blueCount = 0;
+        //redCount = 0;
+        //OnStartServer();
+        //serverManager.RestartMatch((Match match) => 
+        //{
+        //    if (match != null)
+        //    {
+        //        ServerManager.currentMatch = match; // put this back in servermanager if works
+        //        RpcClientJoinGame();
+        //    }
+        //});
+       
     }
 
     [ClientRpc]
-    private void RpcClientJoinGame(string idTournament)
+    private void RpcClientJoinGame()
     {
         //serverManager.SearchMatch();
         ServerManager.SetIsSearching(1);
@@ -88,7 +90,6 @@ public class GameController : NetworkBehaviour
 
     public void OnResetClick()
     {
-        Debug.Log("Reset Clicked");
         GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
     }
 
@@ -112,7 +113,6 @@ public class GameController : NetworkBehaviour
     private void RpcClientCheckWin()
     {
         //Force Game End on Client
-        Debug.Log("RPCClientWin. Server: " + isServer);
         CheckWin(true);
     }
 

@@ -61,7 +61,7 @@ public class ServerManager : NetworkBehaviour
     {
         Match.Load(idTournament, true, string.Empty, (Match[] matches) =>
         {
-            if (matches.Length == 0)
+            if (matches == null || matches.Length == 0)
             {
                 Debug.Log("No match");
             }
@@ -144,8 +144,12 @@ public class ServerManager : NetworkBehaviour
     {
         Debug.Log("RestartMatch");
         Match currentMatchClone = new Match(currentMatch);
-        currentMatchClone.Duplicate((Match match) =>
+        currentMatchClone.Duplicate((Match match, bool success, string error) =>
         {
+            if (!success)
+            {
+                Debug.Log("Restart Match. Error: " + error);
+            }
             callback(match);
         });
     }

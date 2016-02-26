@@ -32,7 +32,6 @@ public class TimerScript : MonoBehaviour {
             timeLeft -= Time.deltaTime;
             if (timeLeft <= 0)
             {
-                Debug.Log("TimeScriptTimeUp");
                 timeLeft = 0;
                 startTimer = false;
             }
