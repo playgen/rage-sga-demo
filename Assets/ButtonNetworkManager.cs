@@ -11,16 +11,17 @@ public class ButtonNetworkManager : NetworkManager
         {
             ServerManager.currentMatch.Quit();
             GameController.singleton.ResetGame();
+            NetworkManager.singleton.StopServer();
+            NetworkManager.singleton.StopHost();
         }
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
     {
-        if (IsClientConnected())
-        {
-            ServerManager.currentMatch.Quit();
-            GameController.singleton.ResetGame();
-        }
+        ServerManager.currentMatch.Quit();
+        GameController.singleton.ResetGame();
+        NetworkManager.singleton.StopServer();
+        NetworkManager.singleton.StopClient();
     }
 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)

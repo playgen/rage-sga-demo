@@ -156,18 +156,25 @@ public class ServerManager : NetworkBehaviour
 
     public void EndMatch(int score)
     {
-        currentMatch.Score((float)score, (bool success, string err) => {
-            Debug.Log("Success: " + success + ". Error: " + err + ". EndMatch");
-            if (success)
+        if (ServerManager.currentMatch.finished)
+        {
+            checkingScore = true;
+        }
+        else {
+            currentMatch.Score((float)score, (bool success, string err) =>
             {
-                checkingScore = true;       
-            }
-            else
-            {
-                Debug.Log("Trying to .score again");
-                EndMatch(score);                // this may fix our problem
-            }
-        });
+                Debug.Log("Success: " + success + ". Error: " + err + ". EndMatch");
+                if (success)
+                {
+                    checkingScore = true;
+                }
+                else
+                {
+                    Debug.Log("Trying to .score again");
+                    EndMatch(score);                // this may fix our problem
+                }
+            });
+        }
     }
 
     private void CheckOpponentScore()
