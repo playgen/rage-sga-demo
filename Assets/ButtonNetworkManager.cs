@@ -9,7 +9,10 @@ public class ButtonNetworkManager : NetworkManager
     {
         if (IsClientConnected())
         {
-            ServerManager.currentMatch.Quit();
+            if (ServerManager.currentMatch  != null)
+            {
+                ServerManager.currentMatch.Quit();
+            }
             GameController.singleton.ResetGame();
             NetworkManager.singleton.StopServer();
             NetworkManager.singleton.StopHost();
@@ -18,7 +21,10 @@ public class ButtonNetworkManager : NetworkManager
 
     public override void OnClientDisconnect(NetworkConnection conn)
     {
-        ServerManager.currentMatch.Quit();
+        if (ServerManager.currentMatch != null)
+        {
+            ServerManager.currentMatch.Quit();
+        }
         GameController.singleton.ResetGame();
         NetworkManager.singleton.StopServer();
         NetworkManager.singleton.StopClient();

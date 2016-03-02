@@ -59,7 +59,7 @@ public class ServerManager : NetworkBehaviour
 
     public void SearchMatch(string idTournament = "0")
     {
-        Match.Load(idTournament, true, string.Empty, (Match[] matches) =>
+        Match.LoadOngoing(idTournament, true, string.Empty, (Match[] matches) =>
         {
             if (matches == null || matches.Length == 0)
             {
@@ -132,12 +132,27 @@ public class ServerManager : NetworkBehaviour
 				}
 				else
 				{
-					ServerManager.currentMatch = match;
-                    // DO STUFF HERE
+                    Match.LoadOngoing("0", true, string.Empty, (Match[] matches) =>
+                    {
+                        if (matches == null || matches.Length == 0)
+                        {
+                            Debug.Log("No match");
+                        }
+                        else
+                        {
+                            foreach (Match m in matches)
+                            {
+                                if (!m.finished)
+                                {
+                                    ServerManager.currentMatch = m;
+                                }
+                            }
+                        }
+                    });
 					Debug.Log("Made match: " + match);
 				}
 			});
-		}
+        }
 	}
 
     public void RestartMatch(Action<Match> callback)
@@ -161,19 +176,26 @@ public class ServerManager : NetworkBehaviour
             checkingScore = true;
         }
         else {
-            currentMatch.Score((float)score, (bool success, string err) =>
+            if (ServerManager.currentMatch.users.Count > 0)
             {
-                Debug.Log("Success: " + success + ". Error: " + err + ". EndMatch");
-                if (success)
+                currentMatch.Score((float)score, (bool success, string err) =>
                 {
-                    checkingScore = true;
+                    Debug.Log("Success: " + success + ". Error: " + err + ". EndMatch");
+                    if (success)
+                    {
+                        checkingScore = true;
+                    }
+                    else
+                    {
+                        Debug.Log("Trying to .score again");
+                        EndMatch(score);                // this may fix our problem
                 }
-                else
-                {
-                    Debug.Log("Trying to .score again");
-                    EndMatch(score);                // this may fix our problem
-                }
-            });
+                });
+            } else
+            {
+                Debug.Log("No players found");
+                ServerManager.currentMatch.Quit();
+            }
         }
     }
 
