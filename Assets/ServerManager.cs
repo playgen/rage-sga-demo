@@ -1,6 +1,6 @@
 ﻿using SocialGamification;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -9,7 +9,12 @@ public class ServerManager : NetworkBehaviour
 	public static int isSearching = 0;
 
 	public static Match currentMatch { get; set; }
-
+    public static string currentActivityId { get; set; }
+    public static string currentRoleId { get; set; }
+    public static Activity currentActivity { get; set; }
+    public static Role currentRole { get; set; }
+    public static List<Goal> currentGoals { get; set; }
+    public static List<ActorGoal> currentActorGoals { get; set; }
     private bool checkingScore = false;
     private double timeInterval = 3f;
     private DateTime lastRequestTime = new DateTime(1337, 1, 1);
@@ -36,7 +41,9 @@ public class ServerManager : NetworkBehaviour
                 JoinMatch();
             }
 		});
-	}
+        currentActivityId = "436958ff-e160-11e5-9ea4-6057185dd7ce";
+        currentRoleId = "cfdf02f7-e160-11e5-9ea4-6057185dd7ce";
+    }
 
     void Update()
     {
@@ -84,6 +91,7 @@ public class ServerManager : NetworkBehaviour
 
 	public static void SetIsSearching(int val, bool startGame = false, bool server = true)
 	{
+        UpdateActivity();
         var oldVal = isSearching;
         isSearching = val;
 		SocialGamificationManager.localUser.customData["isSearching"] = val;
@@ -231,5 +239,66 @@ public class ServerManager : NetworkBehaviour
         {
             Debug.Log("NO CURRENT MATCH");
         }
+    }
+
+    public static void UpdateActivity()
+    {
+        currentActivity = null;
+        currentRole = null;
+        currentGoals = new List<Goal>();
+        currentActorGoals = new List<ActorGoal>();
+        Activity.GetActivity(currentActivityId, (Activity activity) =>
+        {
+            if (activity == null)
+            {
+                currentActivity = null;
+                Debug.Log("No activity");
+            }
+            else
+            {
+                currentActivity = activity;
+                Debug.Log(activity.name);
+                Role.GetRole(currentRoleId, (Role role) =>
+                {
+                    if (role == null)
+                    {
+                        currentRole = null;
+                        Debug.Log("No role");
+                    }
+                    else
+                    {
+                        currentRole = role;
+                        Debug.Log(role.name);
+                        Goal.GetActivityGoals(currentActivity.id, (List<Goal> goalList) =>
+                        {
+                            if (goalList == null || goalList.Count == 0)
+                            {
+                                Debug.Log("No goals");
+                            }
+                            else
+                            {
+                                currentGoals = goalList;
+                                currentActorGoals = new List<ActorGoal>();
+                                foreach (Goal goal in currentGoals)
+                                {
+                                    ActorGoal.CreateActorGoal(goal.id, goal.concernId, goal.rewardResourceId, currentActivity.id, currentRole.id, (ActorGoal g) =>
+                                    {
+                                        if (g == null)
+                                        {
+                                            Debug.Log("Error creating actor goal");
+                                        }
+                                        else
+                                        {
+                                            Debug.Log("Goal created");
+                                            currentActorGoals.Add(g);
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
     }
 }
