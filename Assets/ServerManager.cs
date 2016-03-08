@@ -17,14 +17,22 @@ public class ServerManager : NetworkBehaviour
 	// Use this for initialization
 	private void Start()
 	{
-		string username = "matt";
-		string password = "matt";
-
+        GameController.tracker = Tracker.T();
+		string username;
+		string password;
 		if (isServer)
 		{
 			username = "mayur";
 			password = "mayur";
+            GameController.tracker.Screen("server_start");
 		}
+        else
+        {
+            username = "matt";
+            password = "matt";
+            GameController.tracker.Screen("client_start");
+        }
+        GameController.tracker.RequestFlush();
 		SocialGamificationManager.platform.Authenticate<User>(username, password, (bool success, string error) =>
 		{
 			if (isServer)
