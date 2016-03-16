@@ -5,21 +5,21 @@ using SocialGamification;
 
 public class GameController : NetworkBehaviour
 {
-	public static GameObject controller;
-	public static GameController singleton;
+    public static GameObject controller;
+    public static GameController singleton;
     private ServerManager serverManager;
 
     //UI
-	public TimerScript timerScript { get; private set; }
-	[SyncVar(hook="OnTimeChange")]
-	private string timer = "";
+    public TimerScript timerScript { get; private set; }
+    [SyncVar(hook = "OnTimeChange")]
+    private string timer = "";
     private Text timerText;
     private string timeDecimalPoint = "0.00";
     private Button resetBtn;
 
-	public GameObject spaceprefab;
-	private GameObject _player;
-	private GameObject[] spaces = new GameObject[9];
+    public GameObject spaceprefab;
+    private GameObject _player;
+    private GameObject[] spaces = new GameObject[9];
 
     [SyncVar]
     public bool gameInProgress = false;
@@ -29,214 +29,242 @@ public class GameController : NetworkBehaviour
     [SyncVar]
     public int blueCount = 0;
 
-	private void Start()
-	{
-        controller = gameObject;
-        singleton = this;
-		timerScript = FindObjectOfType<TimerScript>();
-        timerText = GameObject.Find("Timer").GetComponent<Text>();
-        resetBtn = GameObject.Find("Reset").GetComponent<Button>();
-        serverManager = GameObject.Find("ServerManager").GetComponent<ServerManager>();
-	}
+    private void Start()
+    {
+      controller = gameObject;
+      singleton = this;
+      timerScript = FindObjectOfType<TimerScript>();
+      timerText = GameObject.Find("Timer").GetComponent<Text>();
+      resetBtn = GameObject.Find("Reset").GetComponent<Button>();
+      serverManager = GameObject.Find("ServerManager").GetComponent<ServerManager>();
+    }
 
     public void StartGame()
     {
-        gameInProgress = true;
-        timerScript.ResetTimer();
+      gameInProgress = true;
+      timerScript.ResetTimer();
     }
 
     public void ToggleBtn()
     {
-        if (resetBtn.interactable)
-        {
-            resetBtn.interactable = false;
-        }
-        else
-        {
-            resetBtn.interactable = true;
-        }
+      if (resetBtn.interactable)
+      {
+        resetBtn.interactable = false;
+      }
+      else
+      {
+        resetBtn.interactable = true;
+      }
     }
 
     public void ResetGame()
     {
-        Debug.Log("Reset Game. Server: " + isServer);
- 
-        //ToggleBtn();
-        //var objects = GameObject.FindObjectsOfType<SpaceScript>();
-        //foreach (var obj in objects)
-        //{
-        //    Destroy(obj.gameObject);
-        //}
-        //blueCount = 0;
-        //redCount = 0;
-        //OnStartServer();
-        //serverManager.RestartMatch((Match match) => 
-        //{
-        //    if (match != null)
-        //    {
-        //        ServerManager.currentMatch = match; // put this back in servermanager if works
-        //        RpcClientJoinGame();
-        //    }
-        //});
-       
+      Debug.Log("Reset Game. Server: " + isServer);
+
+      //ToggleBtn();
+      //var objects = GameObject.FindObjectsOfType<SpaceScript>();
+      //foreach (var obj in objects)
+      //{
+      //    Destroy(obj.gameObject);
+      //}
+      //blueCount = 0;
+      //redCount = 0;
+      //OnStartServer();
+      //serverManager.RestartMatch((Match match) => 
+      //{
+      //    if (match != null)
+      //    {
+      //        ServerManager.currentMatch = match; // put this back in servermanager if works
+      //        RpcClientJoinGame();
+      //    }
+      //});
+
     }
 
     [ClientRpc]
     private void RpcClientJoinGame()
     {
-        //serverManager.SearchMatch();
-        ServerManager.SetIsSearching(1);
+      //serverManager.SearchMatch();
+      ServerManager.SetIsSearching(1);
     }
 
     public void OnResetClick()
     {
-        GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
+      GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
     }
 
-	private void Update()
-	{
-        if (gameInProgress)
+    private void Update()
+    {
+      if (gameInProgress)
+      {
+        double timeLeft = timerScript.timeLeft;
+        TruncateTime(timeLeft);
+        if (timeLeft <= 0)
         {
-            double timeLeft = timerScript.timeLeft;
-            TruncateTime(timeLeft);
-            if (timeLeft <= 0)
-            {
-                Debug.Log("TimeUp");
-                gameInProgress = false;
-                //CheckWin();
-                RpcClientCheckWin();
-            }
-        }   
-	}
+          Debug.Log("TimeUp");
+          gameInProgress = false;
+          //CheckWin();
+          RpcClientCheckWin();
+        }
+      }
+    }
 
     [ClientRpc]
     private void RpcClientCheckWin()
     {
-        //Force Game End on Client
-        CheckWin(true);
+      //Force Game End on Client
+      CheckWin(true);
     }
 
     public void SetScore(GameObject tile, int player)
     {
-        int state = tile.GetComponent<SpaceScript>().state;
-        if (player == 1)
+      int state = tile.GetComponent<SpaceScript>().state;
+      if (player == 1)
+      {
+        if (state == 2)
         {
-            if (state == 2)
+          blueCount--;
+          Action.Push("Up red down blue", (Reward r) =>
+          {
+            if (r != null)
             {
-                blueCount--;
+              Debug.Log("Action passed");
             }
-            redCount++;
+          });
         }
-        else
+        redCount++;
+        Action.Push("Up red", (Reward r) =>
         {
-            if (state == 1)
+          if (r != null)
+          {
+            Debug.Log("Action passed");
+          }
+        });
+      }
+      else
+      {
+        if (state == 1)
+        {
+          redCount--;
+          Action.Push("Up blue down red", (Reward r) =>
+          {
+            if (r != null)
             {
-                redCount--;
+              Debug.Log("Action passed");
             }
-            blueCount++;
+          });
         }
-        CheckWin();
+        blueCount++;
+        Action.Push("Up blue", (Reward r) =>
+        {
+          if (r != null)
+          {
+            Debug.Log("Action passed");
+          }
+        });
+      }
+      CheckWin();
     }
 
-	public void CheckWin(bool forceGameEnd = false)
-	{
-        bool gameEnded;
-        if (forceGameEnd)
+    public void CheckWin(bool forceGameEnd = false)
+    {
+      bool gameEnded;
+      if (forceGameEnd)
+      {
+        gameEnded = true;
+      }
+      else
+      {
+        gameEnded = !gameInProgress;
+      }
+
+      bool scoreSent = false;
+      if (redCount == 9)
+      {
+        SetWinner("Red");
+        scoreSent = true;
+      }
+      else if (blueCount == 9)
+      {
+
+        SetWinner("Blue");
+        scoreSent = true;
+      }
+
+      if (!scoreSent && gameEnded)
+      {
+        if (redCount > blueCount)
         {
-            gameEnded = true;
+          SetWinner("Red");
+        }
+        else if (blueCount > redCount)
+        {
+          SetWinner("Blue");
         }
         else
         {
-            gameEnded = !gameInProgress;
+          SetWinner("No");
         }
-
-        bool scoreSent = false;
-        if (redCount == 9)
-		{
-            SetWinner("Red");
-            scoreSent = true;
-		}
-		else if (blueCount == 9)
-		{
-           
-			SetWinner("Blue");
-            scoreSent = true;
-		}
-        
-        if (!scoreSent && gameEnded)
-        {
-            if (redCount > blueCount)
-            {
-                SetWinner("Red");
-            }
-            else if (blueCount > redCount) 
-            {
-                SetWinner("Blue");
-            }
-            else 
-            {
-                SetWinner("No");
-            }
-        }
-	}
+      }
+    }
 
     public void SetWinner(string winner)
     {
-        gameInProgress = false;
+      gameInProgress = false;
 
-        Debug.Log("Setwinner: " + isServer);
-        int score;
-        if (isServer) 
-        {
-            score = redCount;
-        }
-        else
-        {
-            score = blueCount;
-        }
-        // SGA game end
-        serverManager.EndMatch(score);
+      Debug.Log("Setwinner: " + isServer);
+      int score;
+      if (isServer)
+      {
+        score = redCount;
+      }
+      else
+      {
+        score = blueCount;
+      }
+      // SGA game end
+      serverManager.EndMatch(score);
 
-        timer = winner + " winner";
+      timer = winner + " winner";
     }
 
     private void TruncateTime(double timeLeft)
     {
-        string truncateTime = timeLeft.ToString(timeDecimalPoint);
-        if (timer != truncateTime)
-        {
-            timer = truncateTime;
-        }
+      string truncateTime = timeLeft.ToString(timeDecimalPoint);
+      if (timer != truncateTime)
+      {
+        timer = truncateTime;
+      }
     }
 
     private void OnTimeChange(string time)
     {
-        timerText.text = time;
+      timerText.text = time;
     }
 
 
-	public override void OnStartServer()
-	{
-		for (int x = 0; x < 3; x++)
-		{
-			for (int y = 0; y < 3; y++)
-			{
-				GameObject space = (GameObject)GameObject.Instantiate(spaceprefab, transform.position, Quaternion.identity);
-				space.transform.position = new Vector3(-3 + (2 * x), -3 + (2 * y), 0f);
-				NetworkServer.Spawn(space);
-				spaces[x + (y * 3)] = space;
-			}
-		}
-	}
+    public override void OnStartServer()
+    {
+      for (int x = 0; x < 3; x++)
+      {
+        for (int y = 0; y < 3; y++)
+        {
+          GameObject space = (GameObject)GameObject.Instantiate(spaceprefab, transform.position, Quaternion.identity);
+          space.transform.position = new Vector3(-3 + (2 * x), -3 + (2 * y), 0f);
+          NetworkServer.Spawn(space);
+          spaces[x + (y * 3)] = space;
+        }
+      }
+    }
 
     public GameObject GetPlayer()
     {
-        return _player;
+      return _player;
     }
 
     public void SetPlayer(GameObject player)
     {
-        _player = player;
+      _player = player;
     }
 
 }

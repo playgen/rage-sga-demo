@@ -9,7 +9,7 @@ public class ServerManager : NetworkBehaviour
   public static int isSearching = 0;
 
   public static Match currentMatch { get; set; }
-  public static string currentRoleId { get; set; }
+  public static string currentRole { get; set; }
   private bool checkingScore = false;
   private double timeInterval = 3f;
   private DateTime lastRequestTime = new DateTime(1337, 1, 1);
@@ -104,7 +104,7 @@ public class ServerManager : NetworkBehaviour
             Debug.Log("match found and im the client");
             GameController.singleton.GetPlayer().GetComponent<PlayerObject>().CmdStartGame();
           }
-          currentRoleId = "d5b91d25-e79f-11e5-9538-ac9e17e18580";
+          currentRole = "Red";
           UpdateGoals();
         }
       }
@@ -149,7 +149,7 @@ public class ServerManager : NetworkBehaviour
                   ServerManager.currentMatch = m;
                 }
               }
-              currentRoleId = "e36e7ecc-e79f-11e5-9538-ac9e17e18580";
+              currentRole = "Blue";
               UpdateGoals();
             }
           });
@@ -240,7 +240,7 @@ public class ServerManager : NetworkBehaviour
 
   public static void UpdateGoals()
   {
-    Role.GetRole(currentRoleId, (Role role) =>
+    Role.GetRole(currentRole, (Role role) =>
     {
       if (role == null)
       {
