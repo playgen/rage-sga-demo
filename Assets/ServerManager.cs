@@ -10,6 +10,7 @@ public class ServerManager : NetworkBehaviour
 
     public static Match currentMatch { get; set; }
 
+    private static string currentRole;
     private bool checkingScore = false;
     private double timeInterval = 3f;
     private DateTime lastRequestTime = new DateTime(1337, 1, 1);
@@ -33,30 +34,6 @@ public class ServerManager : NetworkBehaviour
             GameController.tracker.Screen("client_start");
         }
         GameController.tracker.RequestFlush();
-        SocialGamificationManager.platform.Authenticate<User>(username, password, (bool success, string error) =>
-        {
-            if (isServer)
-            {
-                SetIsSearching(1);
-            }
-            else
-            {
-                JoinMatch();
-            }
-        });
-    }
-
-    // Use this for initialization
-    private void Start()
-    {
-        string username = "matt";
-        string password = "matt";
-
-        if (isServer)
-        {
-            username = "mayur";
-            password = "mayur";
-        }
         SocialGamificationManager.platform.Authenticate<User>(username, password, (bool success, string error) =>
         {
             if (isServer)
