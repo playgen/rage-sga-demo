@@ -7,7 +7,7 @@ public class GameController : NetworkBehaviour
 {
     public static GameObject controller;
     public static GameController singleton;
-    public static Tracker tracker;
+    //public static Tracker //tracker;
 
     private ServerManager serverManager;
 
@@ -43,7 +43,7 @@ public class GameController : NetworkBehaviour
 
     public void StartGame()
     {
-        tracker.Trace("startGame");
+        //tracker.Trace("startGame");
         gameInProgress = true;
         timerScript.ResetTimer();
     }
@@ -95,11 +95,11 @@ public class GameController : NetworkBehaviour
     {
         if (isServer)
         {
-            tracker.Trace("server_resetClicked");
+            //tracker.Trace("server_resetClicked");
         }
         else
         {
-            tracker.Trace("client_resetClicked");
+            //tracker.Trace("client_resetClicked");
         }
         GetPlayer().GetComponent<PlayerObject>().CmdResetGame();
     }
@@ -135,7 +135,7 @@ public class GameController : NetworkBehaviour
             if (state == 2)
             {
                 blueCount--;
-                tracker.Trace("server_clickedBlue");
+                //tracker.Trace("server_clickedBlue");
                 Action.Push("Up red down blue", (Reward r) =>
                 {
                     if (r != null)
@@ -146,10 +146,10 @@ public class GameController : NetworkBehaviour
             }
             else
             {
-                tracker.Trace("server_clickedWhite");
+                //tracker.Trace("server_clickedWhite");
             }
             redCount++;
-            tracker.Trace("server_scoreRed");
+            //tracker.Trace("server_scoreRed");
             Action.Push("Up red", (Reward r) =>
             {
                 if (r != null)
